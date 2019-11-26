@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_26_103317) do
+ActiveRecord::Schema.define(version: 2019_11_26_142657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "orders", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "seedpack_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["seedpack_id"], name: "index_orders_on_seedpack_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
+  end
 
   create_table "seedpacks", force: :cascade do |t|
     t.string "name"
@@ -43,5 +52,7 @@ ActiveRecord::Schema.define(version: 2019_11_26_103317) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "orders", "seedpacks"
+  add_foreign_key "orders", "users"
   add_foreign_key "seedpacks", "users"
 end
