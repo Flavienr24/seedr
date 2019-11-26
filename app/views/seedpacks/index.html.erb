@@ -1,0 +1,9 @@
+<h1><strong>Make sharing green again</strong></h1>
+<% @seedpacks.each do |seedpack| %>
+<h2><%= seedpack.name %></h2>
+<h3><%= seedpack.price %></h3>
+<h3> <%= seedpack.number %></h3>
+<%= link to 'Details', seedpack_path(seedpack) %>
+<%end%>
+
+<!-- probleme mauvaise authentification , il remet un mail (pas le bon)-->
