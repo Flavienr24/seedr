@@ -1,1 +1,120 @@
 // Specific CSS for your home-page
+h1 {
+  color: $black;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 6vw;
+}
+
+h2 {
+  font-size: 3vw;
+}
+
+i {
+  font-size: 4vw;
+  color: $dark-green;
+  opacity: 0.5;
+}
+
+i:hover {
+  color: $green;
+}
+
+
+.background-landing {
+  background: linear-gradient(215.11deg, #FFFFFF 33.62%, rgba(242, 255, 228, 0.594944) 62.27%, rgba(128, 255, 0, 0.56) 98.63%);
+  height: 100vh;
+  width: 100%;
+}
+
+.contain {
+  margin: 0px 90px;
+  height: 87vh;
+}
+
+.header {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.landing-logo {
+  padding-top: 19px;
+  flex-direction: row;
+  display: flex;
+}
+
+.logo-img {
+  width: 55.72px;
+  margin-right: 16px;
+}
+
+
+.typo-logo {
+  justify-content: flex-start;
+  color: $green;
+  padding-top: 3px;
+  font-family: $logo-font;
+  font-size: 48px;
+  line-height: 84px;
+  }
+
+.btn-login {
+    border-radius: 8px;
+    background-color: #F29F05;
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.24);
+    width: 116px;
+    height: 36px;
+    margin-top: 30px;
+  }
+
+.btn-login:hover {
+    background-color: $orange;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.24);
+  }
+
+.login-link {
+  margin: 5px 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.login-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.body-landing {
+  display: flex;
+  padding-top: 100px;
+}
+
+.pitch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing-title {
+  padding-right: 20px;
+}
+
+.landing-sub-title {
+  margin-top: 40px;
+}
+
+.landing-illustration {
+  width: 600px;
+}
+
+.illustration-img {
+  width: 100%;
+}
+
+.scrolling-arrow {
+  display: flex;
+  justify-content: center;
+  align-item: flex-start;
+  height: 40px;
+}
