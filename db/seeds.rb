@@ -5,18 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 require 'json'
+require 'faker'
 
-puts 'Creating user'
+User.destroy_all
+
+puts 'Creating 10 fake users...'
+10.times do
+  user = User.new(
+    name: Faker::Name,
+    bio: Faker::Lorem,
+    password: "password",
+    city: Faker::Adress,
+    email: Faker::Internet.email,
+    avatar: url="https://source.unsplash.com/featured/?face"
+  )
+  user.save!
+end
+
+puts 'Creating bob'
 bob = User.create!(name: 'Bob', city:'Paris', email:'bob@bob.com', password: 'password')
-puts 'User created'
+puts 'bob created'
 
 puts "Let's start the seed for flowers..."
 
-puts "Destroy the database"
-Seedpack.destroy_all
-puts "Destruction done!!!!!!!!!!!!!"
+
 
 puts "start the seed"
 filepath = "db/json-flowers.json"
@@ -40,3 +53,4 @@ f.each do |seed|
 end
 
 puts "seed finished"
+
