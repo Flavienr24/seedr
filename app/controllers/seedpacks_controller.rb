@@ -10,14 +10,17 @@ class SeedpacksController < ApplicationController
   end
 
   def create
-    if @seedpack = seedpack.create(seedpack_params)
-      redirect_to seedpack_path(@seedpack)
+    @seedpack = Seedpack.new(seedpack_params)
+    @seedpack.user = current_user
+    if @seedpack.save
+      redirect_to seedpacks_path(@seedpack)
     else
       render :new
     end
   end
 
   def show
+    @user = User.find(@seedpack.user_id)
   end
 
   def edit
@@ -34,7 +37,7 @@ class SeedpacksController < ApplicationController
   private
 
   def seedpack_params
-    params.require(:seedpack).permit(:name, :description, :image, :number, :price, :user_id)
+    params.require(:seedpack).permit(:name, :description, :image, :number, :price)
   end
 
   def set_seedpack

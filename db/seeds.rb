@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "destroying: database"
+
+Seedpack.destroy_all
+User.destroy_all
+user1 = User.create!(email:"seedr@seed.com", password:"password", name:"Flavien", city:"Marseille", avatar:"image", bio:"kkk")
+
+puts "hello"
+Seedpack.create!(name:"name", number:1, description: "description", image:"image", price: 2, user: user1)
+
+p "seeds correctly done"
+

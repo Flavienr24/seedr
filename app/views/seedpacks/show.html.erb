@@ -3,9 +3,9 @@
 <p><%= @seedpack.description %></p>
 <h3><%= @seedpack.number %></h3>
 <h3><%= @seedpack.price %></h3>
-<%= link to 'index', root_path %>
 <h3><%= @user.name %></h3>
 <h3><%= @user.bio %></h3>
 <h3><%= @user.avatar %></h3>
+<h3><%= @user.city %></h3>
+<%= link_to 'Seeds list', seedpacks_path %>
 
-<%= BUY  %>
