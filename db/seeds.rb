@@ -5,10 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 require 'json'
 require 'faker'
 
+puts "destroying: database"
+
+Seedpack.destroy_all
 User.destroy_all
+p "seeds correctly done"
 
 puts 'Creating 10 fake users...'
 10.times do
@@ -53,4 +58,5 @@ f.each do |seed|
 end
 
 puts "seed finished"
+>>>>>>> 9cc2879a566c2b9d5eb1229af9b6ea0d8e43e7b7
 
