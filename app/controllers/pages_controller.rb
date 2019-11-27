@@ -17,6 +17,7 @@ class PagesController < ApplicationController
     # @mysells = Order.where(seedpack: seedpack(current_user))
 
     # afficher l'historique des achats
-    # @mybuys = Order.where( current_user)
+    # @order = current_user.orders.where(state: 'pending').find(params[:order_id])
+     @mybuys = Order.where(user: current_user)
   end
 end
