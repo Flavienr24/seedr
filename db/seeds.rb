@@ -28,9 +28,9 @@ puts 'Creating 10 fake users...'
   user.save!
 end
 
-puts 'Creating bob'
-bob = User.create!(name: 'Bob', city:'Paris', email:'bob@bob.com', password: 'password')
-puts 'bob created'
+# puts 'Creating bob'
+# bob = User.create!(name: 'Bob', city:'Paris', email:'bob@bob.com', password: 'password')
+# puts 'bob created'
 
 puts "Let's start the seed for flowers..."
 
@@ -53,7 +53,7 @@ f.each do |seed|
     description: seed['description'],
     image: seed['image'],
     price: seed['price'].to_i,
-    user: bob
+    user: User.new
   )
 end
 

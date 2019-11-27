@@ -16,7 +16,6 @@ class PagesController < ApplicationController
     # afficher l'historique des ventes
     @mysells = Order.where(seedpack_id: @myseeds.ids)
     # afficher l'historique des achats
-    # @order = current_user.orders.where(state: 'pending').find(params[:order_id])
-     @mybuys = @user.orders
+    @mybuys = @user.orders
   end
 end
