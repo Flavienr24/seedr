@@ -104,6 +104,23 @@ i:hover {
   margin-top: 40px;
 }
 
+.btn-index {
+  border-radius: 25px;
+  border: 2px solid $yellow;
+  width: 40%;
+  height: 52px;
+  margin-top: 35px;
+  color: $yellow;
+  font-weight: bold;
+  font-family: Roboto;
+  font-size: 22px;
+  display: grid;
+}
+
+.btn-index:hover {
+  text-decoration: none;
+}
+
 .landing-illustration {
   width: 600px;
 }
