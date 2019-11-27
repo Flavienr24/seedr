@@ -16,7 +16,7 @@ puts 'Creating 10 fake users...'
     name: Faker::Name,
     bio: Faker::Lorem,
     password: "password",
-    city:"paris",
+    city: Faker::Adress,
     email: Faker::Internet.email,
     avatar: url="https://source.unsplash.com/featured/?face"
   )
