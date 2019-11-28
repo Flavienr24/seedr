@@ -20,3 +20,4 @@ class PagesController < ApplicationController
     @mybuys = @user.orders
   end
 end
+
