@@ -19,18 +19,18 @@ puts 'Creating 10 fake users...'
     name: Faker::Name,
     bio: Faker::Lorem,
     password: "password",
-    city: Faker::Adress,
+    city: Faker::Address,
     email: Faker::Internet.email,
     avatar: url="https://source.unsplash.com/featured/?face"
   )
   user.save!
 end
 
-# puts 'Creating bob'
+puts 'Creating bob'
 
-# bob = User.create!(name: 'Bob', city:'Paris', email:'bob@bob.com', password: 'password')
+bob = User.create!(name: 'Bob', city:'Paris', email:'bob@bob.com', password: 'password')
 
-# puts 'bob created'
+puts 'bob created'
 
 puts "start the seed"
 
