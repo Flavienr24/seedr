@@ -20,8 +20,10 @@
             <h2><%=seed.name %></h2>
             <%= image_tag "logo.png", alt: "graine", width: 200 %>
           </div>
-          <%= link_to "Détruire la fiche", seedpacks_path, class: 'card-link' %>
-          <%= link_to "Modifier la fiche", edit_seedpack_path, class: 'card-link' %>
+          <%= link_to "Détruire la fiche", seedpack_path(seed), class: 'card-link', method: :delete,
+      data: { confirm: "Are you sure?" }%>
+
+          <%= link_to "Modifier la fiche", edit_seedpack_path(seed), class: 'card-link' %>
         </div>
       </div>
     <% end %>
