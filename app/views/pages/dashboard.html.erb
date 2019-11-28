@@ -8,7 +8,7 @@
 
   <h5><%= @user.email%></h5>
   <h5><%= @user.city %></h5>
-  <%= link_to "Rajouter une graine", new_seedpack_path, class: "btn btn-success btn-lg" %>
+  <%= link_to "Add a seed", new_seedpack_path, class: "btn btn-success btn-lg" %>
 </div>
 
 <div class="container">
@@ -21,10 +21,9 @@
             <h2><%=seed.name %></h2>
             <%= image_tag "logo.png", alt: "graine", width: 200 %>
           </div>
-          <%= link_to "Détruire la fiche", seedpack_path(seed), class: 'card-link', method: :delete,
+          <%= link_to "Delete", seedpack_path(seed), class: 'card-link', method: :delete,
       data: { confirm: "Are you sure?" }%>
-
-          <%= link_to "Modifier la fiche", edit_seedpack_path(seed), class: 'card-link' %>
+          <%= link_to "Modify", edit_seedpack_path(seed), class: 'card-link' %>
         </div>
       </div>
     <% end %>

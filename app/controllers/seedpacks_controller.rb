@@ -28,7 +28,7 @@ class SeedpacksController < ApplicationController
 
   def update
     if @seedpack.update(seedpack_params)
-      redirect_to @seedpack, notice: "Seed was successfully updated"
+      redirect_to seedpack_path, notice: "Seed was successfully updated"
     else
       render :edit
     end
@@ -36,6 +36,7 @@ class SeedpacksController < ApplicationController
 
   def destroy
     @seedpack.destroy
+    redirect_to seedpacks_path
   end
 
   private
