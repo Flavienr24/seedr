@@ -19,7 +19,7 @@ puts 'Creating 10 fake users...'
     name: Faker::Name,
     bio: Faker::Lorem,
     password: "password",
-    city: Faker::Adress,
+    city: Faker::Address,
     email: Faker::Internet.email,
     avatar: url="https://source.unsplash.com/featured/?face"
   )
@@ -47,7 +47,7 @@ f.each do |seed|
     description: seed['description'],
     image: seed['image'],
     price: seed['price'].to_i,
-    user: bob
+    user: User.new
   )
 end
 
