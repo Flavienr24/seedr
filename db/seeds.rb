@@ -26,11 +26,11 @@ puts 'Creating 10 fake users...'
   user.save!
 end
 
-# puts 'Creating bob'
+puts 'Creating bob'
 
-# bob = User.create!(name: 'Bob', city:'Paris', email:'bob@bob.com', password: 'password')
+bob = User.create!(name: 'Bob', city:'Paris', email:'bob@bob.com', password: 'password')
 
-# puts 'bob created'
+puts 'bob created'
 
 puts "start the seed"
 
