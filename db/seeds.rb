@@ -11,6 +11,11 @@ require 'faker'
 
 Seedpack.destroy_all
 User.destroy_all
+puts "DB deleted"
+
+puts "Create default user"
+
+User.create(name: 'Bob', city: 'Paris', email:'bob@bob.com', password: 'password')
 
 puts 'Creating 10 fake users...'
 
