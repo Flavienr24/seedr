@@ -11,7 +11,7 @@ require 'faker'
 
 Seedpack.destroy_all
 User.destroy_all
-
+puts "DB deleted"
 puts 'Creating 10 fake users...'
 
 10.times do
@@ -47,7 +47,7 @@ f.each do |seed|
     description: seed['description'],
     image: seed['image'],
     price: seed['price'].to_i,
-    user: User.new
+    user: User.find(User.ids.sample),
   )
 end
 
