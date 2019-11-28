@@ -1,2 +1,36 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="background-landing">
+  <div class="contain">
+    <div class="header">
+      <div class="landing-logo">
+        <div class="logo">
+          <%= image_tag "logo.png", class: "logo-img"%>
+        </div>
+        <div class="typo-logo">
+          Seedr
+        </div>
+      </div>
+      <div class="btn btn-login">
+        <%= link_to 'Log in', user_session_path, class: "login-link" %>
+      </div>
+    </div>
+    <div class="body-landing">
+      <div class="pitch">
+        <div class="landing-title">
+          <h1>Make the sharing green again!</h1>
+        </div>
+        <div class="landing-sub-title">
+          <h2>Plantez, récoltez, partagez.</h2>
+        </div>
+        <div class="btn btn-index">
+          <%= link_to 'Trouvez des graines à proximité', seedpacks_path %>
+        </div>
+      </div>
+      <div class="landing-illustration">
+        <%= image_tag "landing-illustration.png", class: "illustration-img"%>
+      </div>
+    </div>
+  </div>
+  <div class="scrolling-arrow">
+    <i class="fas fa-arrow-circle-down"></i>
+  </div>
+</div>

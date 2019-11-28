@@ -1,0 +1,16 @@
+<h2><%= @seedpack.name %></h2>
+
+  <div class="card-seed" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?flowers');">
+  <a href=""> <%= @seedpack.image %> </a>
+  </div>
+
+
+<p><%= @seedpack.description %></p>
+<h3><%= @seedpack.number %> - unité</h3>
+<h3><%= @seedpack.price %>€</h3>
+<h3> name : <%= @user.name %></h3>
+<h3> bio : <%= @user.bio %></h3>
+<h3><%= @user.avatar %></h3>
+<h3>city : <%= @user.city %></h3>
+<%= link_to 'Seeds list', seedpacks_path, class:"btn btn-primary btn-lg" %>
+
