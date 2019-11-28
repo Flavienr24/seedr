@@ -2,9 +2,7 @@ class OrdersController < ApplicationController
 
   def create
     @seedpack = Seedpack.find(params[:seedpack_id])
-    @order = Order.new
-    @order.seedpack = @seedpack
-    @order.user = current_user
+    @order = Order.new(user: current_user, seedpack: @seedpack)
     @order.save
 
     redirect_to seedpack_confirmation_path
