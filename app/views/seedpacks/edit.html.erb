@@ -1,0 +1,22 @@
+<h1>Editing Seed</h1>
+
+<%= simple_form_for @seedpack do |f| %>
+<%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name,
+                required: true,
+                autofocus: true %>
+    <%= f.input :description,
+                required: true %>
+    <%= f.input :price,
+                required: true %>
+    <%= f.input :number,
+                required: true %>
+     <%= f.input :image,
+                required: true %>
+  </div>
+
+<%= link_to 'Details', seedpack_path(seedpack) %>
+<%= link_to 'Seeds list', seedpacks_path, class:"btn btn-primary btn-lg" %>
+

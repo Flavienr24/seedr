@@ -5,29 +5,33 @@ class SeedpacksController < ApplicationController
     @seedpacks = Seedpack.all
   end
 
+  def show
+  @user = @seedpack.user
+  end
+
   def new
     @seedpack = Seedpack.new
+  end
+
+  def edit
   end
 
   def create
     @seedpack = Seedpack.new(seedpack_params)
     @seedpack.user = current_user
     if @seedpack.save
-      redirect_to seedpacks_path(@seedpack)
+      redirect_to seedpacks_path(@seedpack), notice: "Seed was successfully created"
     else
       render :new
     end
   end
 
-  def show
-    @user = User.find(@seedpack.user_id)
-  end
-
-  def edit
-  end
-
   def update
-    @seedpack.update(seedpack_params)
+    if @seedpack.update(seedpack_params)
+      redirect_to @seedpack, notice: "Seed was successfully updated"
+    else
+      render :edit
+    end
   end
 
   def destroy
