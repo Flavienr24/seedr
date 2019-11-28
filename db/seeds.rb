@@ -16,10 +16,10 @@ puts 'Creating 10 fake users...'
 
 10.times do
   user = User.new(
-    name: Faker::Name,
-    bio: Faker::Lorem,
+    name: Faker::Name.name,
+    bio: Faker::Lorem.sentences,
     password: "password",
-    city: Faker::Address,
+    city: Faker::Address.city,
     email: Faker::Internet.email,
     avatar: url="https://source.unsplash.com/featured/?face"
   )
