@@ -1,4 +1,4 @@
-<h2>New seed</h2>
+<h1> Your New seed</h1>
 
 <%= simple_form_for @seedpack do |f| %>
 <%= f.error_notification %>
@@ -21,3 +21,6 @@
     <%= f.button :submit, "Add" %>
   </div>
 <% end %>
+
+<%= link_to  "Go back to list of seeds", seedpacks_path %>
+<%#= render "devise/shared/links" %>
