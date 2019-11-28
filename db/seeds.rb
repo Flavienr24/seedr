@@ -33,9 +33,9 @@ end
 
 puts 'Creating bob'
 
-bob = User.create!(name: 'Bob', city:'Paris', email:'bob@bob.com', password: 'password')
+# bob = User.create!(name: 'Bob', city:'Paris', email:'bob@bob.com', password: 'password')
 
-puts 'bob created'
+# puts 'bob created'
 
 puts "start the seed"
 
@@ -53,7 +53,6 @@ f.each do |seed|
     image: seed['image'],
     price: seed['price'].to_i,
     user: User.all.sample
-    # user: User.find(User.ids.sample),
   )
 end
 
