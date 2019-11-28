@@ -1,7 +1,18 @@
-<h1> Your New seed</h1>
+<div class="container">
+  <!-- <div class="form"> -->
+    <!-- <div class="row justify-content-center"> -->
+      <!-- <div class="col-md-8"> -->
+        <h1 id="title_seed"> Your New seed</h1>
+        <div class="form">
+          <%= simple_form_for @seedpack do |f| %>
+          <%= f.error_notification %>
+
 
 <%= render 'form', seedpack: @seedpack %>
+</div>
+  <div class="form-actions" >
+    <%= f.button :submit, "Add a new seed", class: "btn btn-success btn-form" %>
+    <%= link_to  "Go back to list of seeds", seedpacks_path, class: "btn btn-success btn-form" %>
+</div>
 
-<%= link_to  "Go back to list of seeds", seedpacks_path %>
 
-<%#= render "devise/shared/links" %>

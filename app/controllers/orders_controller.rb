@@ -1,16 +1,13 @@
 class OrdersController < ApplicationController
 
   def create
-    @order = Order.new(order_params)
+    @seedpack = Seedpack.find(params[:seedpack_id])
+    @order = Order.new(user: current_user, seedpack: @seedpack)
     @order.save
 
-    redirect_to dashboard(current_user)
+    redirect_to seedpack_confirmation_path
   end
 
-  private
-
-  def order_params
-    params.require(:order).permit(:current_user, :seedpack)
+  def confirmation
   end
-
 end

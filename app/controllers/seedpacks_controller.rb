@@ -2,7 +2,9 @@ class SeedpacksController < ApplicationController
   before_action :set_seedpack, only: [:show, :edit, :update, :destroy]
 
   def index
-    @seedpacks = Seedpack.all
+    # @seedpacks = Seedpack.all
+    @all_orders = Order.all
+    @seedpacks_available = Seedpack.where.not(id: Order.pluck(:seedpack_id))
   end
 
   def show
