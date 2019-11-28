@@ -1,27 +1,32 @@
-<h1> Your New seed</h1>
+<div class="container">
+  <!-- <div class="form"> -->
+    <!-- <div class="row justify-content-center"> -->
+      <!-- <div class="col-md-8"> -->
+        <h1 id="title_seed"> Your New seed</h1>
+        <div class="form">
+          <%= simple_form_for @seedpack do |f| %>
+          <%= f.error_notification %>
 
-<%= simple_form_for @seedpack do |f| %>
-<%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :name,
+            <%= f.input :name,
                 required: true,
                 autofocus: true %>
-    <%= f.input :description,
+            <%= f.input :description,
                 required: true %>
-    <%= f.input :price,
+            <%= f.input :price,
                 required: true %>
-    <%= f.input :number,
+            <%= f.input :number,
                 required: true %>
-     <%= f.input :image,
+            <%= f.input :image,
                 required: true %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Add" %>
-  </div>
+        </div>
+      <!-- </div> -->
+    <!-- </div> -->
+</div>
+  <div class="form-actions" >
+    <%= f.button :submit, "Add a new seed", class: "btn btn-success btn-form" %>
+    <%= link_to  "Go back to list of seeds", seedpacks_path, class: "btn btn-success btn-form" %>
 <% end %>
+</div>
 
-<%= link_to  "Go back to list of seeds", seedpacks_path %>
 
 <%#= render "devise/shared/links" %>
