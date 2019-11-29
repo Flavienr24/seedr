@@ -26,19 +26,23 @@
 <div class="row">
   <% @myseeds.each do |seed| %>
   <div class="col-12 col-md-6 d-flex">
-    <img src="https://source.unsplash.com/random" class="avatar-dashboard" alt="random picture">
+    <img src="https://source.unsplash.com/89x89/?flowers"<%= rand(1..100)%>class="image-dashboard" alt="random picture">
         <div class="product_description">
-          <h2><%=seed.name %></h2>
-          <h3><%= seed.description %></h3>
+          <h3><%=seed.name %></h3>
+          <p><%= seed.description %></p>
           <%= link_to "Delete", seedpack_path(seed), class: 'card-link', method: :delete,
           data: { confirm: "Are you sure?" }%>
+           <!-- <i class="fa fa-trash" aria-hidden="true"></i> -->
           <%= link_to "Modify", edit_seedpack_path(seed),class: 'card-link' %>
+   <!--        <i class="fas fa-pen"></i> -->
         </div>
   </div>
   <% end %>
-  <div class="col-12 col-md-6 d-flex">
-      <i class="fas fa-plus"></i>
-      <%= link_to " Add a seed", new_seedpack_path, class:"btn btn-primary btn-lg" %>
+  <div>
+      <div id="button">
+        <i class="fas fa-plus"></i>
+        <%= link_to " Add a seed", new_seedpack_path, class:"btn btn-primary btn-lg" %>
+      </div>
   </div>
 </div>
 </div>
@@ -46,24 +50,30 @@
 
   <!--   CARD MY HISTORIC -->
 <div class="card-product">
-    <div class="d-flex">
-      <div class="">
-        <h2>Mes ventes</h2>
-
-        <!-- VENTES -->
+    <div class="d-flex justify-content-center" >
+              <!-- VENTES -->
+      <div>
+        <h3>My sells</h3>
          <% @mysells.each do |sell| %>
-          <img src="https://source.unsplash.com/random" class="avatar-dashboard" alt="random picture">
-          <h2><%=sell.user.name %></h2>
+          <div >
+            <img src="https://source.unsplash.com/89x89?flowers"<%= rand(1..100)%>class="image-dashboard" alt="random picture">
+            <div class="product_description">
+                <h2><%=sell.user.name %></h2>
+            </div>
+          </div>
           <% end %>
 
       </div>
-
+        <!-- ACHATS -->
       <div>
-        <h2> Mes achats</h2>
-
+        <h3> My orders</h3>
           <% @mybuys.each do |buy| %>
-          <img src="https://source.unsplash.com/random" class="avatar-dashboard" alt="random picture">
-          <h2><%=buy.seedpack.name %></h2>
+          <div >
+            <img src="https://source.unsplash.com/89x89?flowers"<%= rand(1..100)%>class="image-dashboard" alt="random picture">
+            <div class="product_description">
+              <h2><%=buy.seedpack.name %></h2>
+            </div>
+          </div>
           <% end %>
       </div>
     </div>
