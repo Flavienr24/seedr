@@ -1,11 +1,29 @@
 
 
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-6">
+  <div btn-back></div>
+  <div class="card-seed" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://source.unsplash.com/500x400/?flowers');">
+    <div id="seed_image"></div>
+    <div id="bio-seed"></div>
+    <div id="btn-buy"></div>
+  </div>
 
-      <div class="card-seed" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://source.unsplash.com/500x400/?flowers');">
-      </div>
+  <div id="complement">
+    <div id="info-seedpack">
+      <h3>Details</h3>
+      <div id=qty></div>
+      <div id=price></div>
+    </div>
+    <div id="user-seedshow">
+      <div class="image"></div>
+      <div> id="bio-user-seedshow</div>
+    </div>
+  </div>
+  <div class="btn-back"></div>
+</div>
+
+
+
 
       <div>
         <h2><%= @seedpack.name %></h2>
@@ -19,7 +37,8 @@
       </div>
     </div>
   </div>
-
+<!-- <div class="row justify-content-center">
+      <div class="col-12 col-lg-6"> -->
 
 <p><%= @seedpack.description %></p>
 <h3><%= @seedpack.number %> - unité</h3>
