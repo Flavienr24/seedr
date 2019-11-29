@@ -1,25 +1,38 @@
 
 .card-seed {
+  width: 275px;
   height: 294px;
   border-radius: 16px 16px 0px 0px;
   margin-bottom: 32px;
-  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 
-.card-seed img {
-  height: 68%;
+.card-img {
+  width: 100%;
+  max-height: 203px;
+  border-radius: 16px 16px 0px 0px;
+  overflow: hidden;
+}
+
+.card-seed-content:hover {
+background-color: rgba(149, 203, 148, 0.4);
 }
 
 .card-seed-content {
   background-color: white;
-  height: 32%;
+  height: 91px;
+  width: 100%;
+  padding: 10px;
 }
 
 .card-seed h2 {
   font-family: Roboto;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   color: $black;
+  margin: 0px;
+  margin-bottom: 8px;
 }
 
 .card-seed p {
@@ -27,4 +40,22 @@
   font-size: 14px;
   line-height: 16px;
   color: $black;
+  margin: 0px;
+  display: flex;
+}
+
+.seed-card-price {
+  font-family: Roboto;
+  font-weight: bold;
+  line-height: 16px;
+  color: $black;
+  position: absolute;
+      top: 20px;
+      left: 20px;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
 }
