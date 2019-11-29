@@ -3,8 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 600px;
-  padding: 0px 50px;
+  padding: 30px 50px;
   color: rgba(0,0,0,0.3);
   width: 100%;
 }
@@ -18,11 +17,12 @@
 
 
 h1 {
-  color: green;
-  font-size: 24px;
+  color: #303030;
+  font-size: 32px;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
+  margin: 20px;
 }
 
 #title_seed {
@@ -30,9 +30,11 @@ h1 {
 }
 
 .btn-form {
-  width: 30%
+  width: 30%;
+  margin: 50px;
+  background-color:: #3E5902
 }
 
 .new_seedpack {
-  width: 100%
+  width: 50%
 }
