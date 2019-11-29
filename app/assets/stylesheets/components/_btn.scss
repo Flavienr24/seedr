@@ -7,7 +7,7 @@
   line-height: 26px;
   display: flex;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   color: #FFFFFF;
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   background: linear-gradient(181.19deg, #3E5902 49.98%, #012611 95.66%);
@@ -65,6 +65,7 @@
   border: 1px solid #D96704;
   box-sizing: border-box;
   border-radius: 25px;
+  margin: 40px 0px;
 }
 
 .search-bar {
