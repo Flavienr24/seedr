@@ -7,30 +7,39 @@
 
 .avatar-dashboard {
 border-radius:50%;
-width: 100px;
-height: 100px;
+width: 130px;
+height: 130px;
 }
 
 .card-product{
 background-size: cover;
-height:300px;
+height:724px;
 width: 800px;
 margin: 20 auto;
-border-radius:10px;
-box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
-display:flex;
-flex-direction: row;
-justify-content:flex-start;
-
+background: #FFFFFF;
+box-shadow: 1px 6px 26px rgba(0, 0, 0, 0.38);
+border-radius: 16px;
+padding: 40px;
 }
 
+.card-product-top{
+  height: 365px;
+  display: flex;
+}
+
+
+
+.card-product-bottom {
+  height: 359px;
+}
 
 .product_description{
 justify-content:center;
 font-size: 18px;
 justify-content:center;
-margin-left: 20px
-
+margin-left: 20px;
+width: 77%;
+background-color: white;
 }
 
 #button {

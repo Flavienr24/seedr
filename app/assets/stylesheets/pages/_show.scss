@@ -1,11 +1,15 @@
+.show-container {
+  width: 1120px !important;
+}
+
 .image-user {
     height: 148px;
-    margin: 56px;
+    margin: 16px;
     border-radius: 16px;
     width: 148px;
 }
 
-.card-seed{
+.card-seed-show{
   height: 391px;
   border-radius: 16px 16px 0px 0px;
   margin-bottom: 32px;
@@ -20,7 +24,7 @@
 
 .bio-user-seedshow{
     height: 238px;
-    margin: 36px;
+    margin: 16px;
     border-radius: 16px;
     width: 454px;
     padding: 16px;
@@ -28,6 +32,7 @@
 
 .image-seed {
   border-radius: 16px;
+  height: 391px;
 }
 
 .info-user-seedshow {
