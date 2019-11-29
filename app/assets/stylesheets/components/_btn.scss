@@ -1,0 +1,71 @@
+.btn-buy {
+  width: 219px;
+  height: 48px;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(181.19deg, #3E5902 49.98%, #012611 95.66%);
+  border-radius: 25px;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.23);
+}
+
+.btn-add-seed-dashboard {
+  width: 219px;
+  height: 48px;
+  box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.23);
+  background: linear-gradient(181.19deg, #F29F05 49.98%, #D96704 95.66%);
+  border-radius: 25px;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn-add-seed-home {
+  width: 307px;
+  height: 67px;
+  background: $yellow;
+  box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px 0px 0px 8px;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.btn-back {
+  width: 219px;
+  height: 46.83px;
+  background: #FFFFFF;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #D96704;
+  border: 1px solid #D96704;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
+
+
+
+
