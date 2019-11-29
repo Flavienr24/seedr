@@ -3,46 +3,23 @@
   <div class="form">
     <%= simple_form_for @seedpack do |f| %>
     <%= f.error_notification %>
-    <div class="form-inputs">
-      <div class="nommination">
-        <div class="name">
+
           <%= f.input :name,placeholder: "add a name",
                 required: true,
-                autofocus: true %>
-        </div>
-        <div class="imput-name"></div>
-      </div>
-      <div class="description"></div>
-      <div class="description-term">
+                autofocus: true, label: 'seed name' %>
         <%= f.input :description,placeholder:"add a description",
                   required: true %>
-      </div>
-      <div class="imput-description"></div>
-    </div>
-    <div class="div-price"></div>
-    <div class="price">
       <%= f.input :price, placeholder:"add a price",
                   required: true %>
-    </div>
-    <div class="imput-price"></div>
-    <div class="div-quantity"></div>
-    <div class="number">
       <%= f.input :number,placeholder: "add a quantity",
                   required: true %>
-    </div>
-    <div class="imput-number"></div>
-    <div class="div-photo">
-      <div class="photo">
         <%= f.input :image, required: true %>
-      </div>
-      <div class="imput-photo"></div>
-    </div>
   <div class="form-actions">
      <%= f.button :submit, 'ADD', class: "btn-add"%>
   </div>
   </div>
-</div>
 <% end %>
+</div>
 
 
 

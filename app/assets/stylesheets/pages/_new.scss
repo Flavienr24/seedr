@@ -2,19 +2,31 @@
   background: #F4F4F4;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 30px 50px;
   color: rgba(0,0,0,0.3);
   width: 100%;
+  color: #303030
 }
 
 .form-actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-right: 18px;
   padding-left: 18px;
 }
 
+.form-group  {
+  display: flex;
+
+  label {
+    width: 50%;
+    padding-right: 2em;
+  }
+
+}
+
+// .form-group label {}
 
 h1 {
   color: #303030;
