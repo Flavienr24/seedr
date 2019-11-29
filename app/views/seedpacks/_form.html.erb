@@ -1,23 +1,38 @@
-<%= simple_form_for @seedpack do |f| %>
-<%= f.error_notification %>
-  <div class="form-inputs">
-    <%= f.input :name,placeholder: "add a name",
-                required: true,
-                autofocus: true %>
-    <%= f.input :description,placeholder:"add a description",
-                required: true %>
-    <%= f.input :price, placeholder:"add a price",
-                required: true %>
-    <%= f.input :number,placeholder: "add a quantity",
-                required: true %>
-     <%= f.input :image,
-                required: true %>
-    <div class="form-actions">
-    <%= f.button :submit, class:"btn btn-primary btn-lg"%>
-    </div>
-  </div>
+<div class="container">
+  <h1>Add a seed</h1>
+  <div class="form">
+    <%= simple_form_for @seedpack do |f| %>
+    <%= f.error_notification %>
 
-  <% end %>
+          <%= f.input :name,placeholder: "add a name",
+                required: true,
+                autofocus: true, label: 'Seed name' %>
+        <%= f.input :description,placeholder:"add a description",
+                  required: true %>
+      <%= f.input :price, placeholder:"add a price",
+                  required: true %>
+      <%= f.input :number,placeholder: "add a quantity",
+                  required: true %>
+        <%= f.input :image, required: true %>
+  <div class="form-actions">
+     <%= f.button :submit, 'ADD', class: "btn-add"%>
+  </div>
+  </div>
+<% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- <div class="container">
@@ -25,4 +40,4 @@
     <!-- <div class="row justify-content-center"> -->
       <!-- <div class="col-md-8"> -->
         <!-- <h1 id="title_seed"> Your New seed</h1> -->
-       <!--  <div class="form"> --> -->
+       <!--  <div class="form"> -->
