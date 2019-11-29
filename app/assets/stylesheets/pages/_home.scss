@@ -1,14 +1,15 @@
 // Specific CSS for your home-page
-h1 {
+#title-landing {
   color: $black;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
-  font-size: 6vw;
+  font-size: 5vw;
+  line-height: 1em;
 }
 
-h2 {
-  font-size: 3vw;
+#subtitle-landing {
+  font-size: 2.5vw;
 }
 
 i {
@@ -26,11 +27,12 @@ i:hover {
   background: linear-gradient(215.11deg, #FFFFFF 33.62%, rgba(242, 255, 228, 0.594944) 62.27%, rgba(128, 255, 0, 0.56) 98.63%);
   height: 100vh;
   width: 100%;
+  min-height: 800px;
 }
 
 .contain {
   margin: 0px 10%;
-  height: 87vh;
+  height: 85%;
 }
 
 .header {
@@ -94,6 +96,7 @@ i:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 58%;
 }
 
 .landing-title {
@@ -123,6 +126,7 @@ i:hover {
 
 .landing-illustration {
   width: 600px;
+  opacity: 0.9;
 }
 
 .illustration-img {
