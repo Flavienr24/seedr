@@ -1,73 +1,65 @@
 
 
 <div class="container">
-  <div btn-back></div>
+
+  <div btn-back><%= link_to ' back to Seeds list', seedpacks_path, class:"btn btn-primary btn-lg" %></div>
+
   <div class="card-seed" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://source.unsplash.com/500x400/?flowers');">
-    <div id="seed_image"></div>
-    <div id="bio-seed"></div>
-    <div id="btn-buy"></div>
+    <div id="seed_image">
+      <a href=""><%= @seedpack.image %></a>
+    </div>
+    <div id="bio-seed">
+      <h2><%= @seedpack.name %></h2>
+      <h5>Description:</h5>
+      <p><%= @seedpack.description %></p>
+    </div>
+    <div id="btn-buy"><%= link_to 'Buy the seed package', seedpack_orders_path(@seedpack), method: :post, class:"btn btn-primary btn-lg" %></div>
   </div>
 
   <div id="complement">
-    <div id="info-seedpack">
-      <h3>Details</h3>
-      <div id=qty></div>
-      <div id=price></div>
+    <div id="info-seedpack-seedshow">
+      <h3>Details:</h3>
+      <div id="qty">
+        <p>Quantity =       <%= @seedpack.number %> pcs</p>
+      </div>
+      <div id="price">
+        <p>Price =          <%= @seedpack.price %> €</p>
+      </div>
+      <div id="creadate">
+        <p> Creation date : <%= @seedpack.created_at
+         %>€</p>
+      </div>
     </div>
-    <div id="user-seedshow">
-      <div class="image"></div>
-      <div> id="bio-user-seedshow</div>
+
+    <div id="info-user-seedshow">
+      <h3>User:</h3>
+      <div class="image">
+        <a href=""><%= @user.avatar %></a>
+      </div>
+      <div id="bio-user-seedshow">
+        <h3><%= @user.name %></h3>
+        <h5> Bio: </h5>
+        <p><%= @user.bio %></p>
+      </div>
     </div>
   </div>
-  <div class="btn-back"></div>
+  <div class="btn-back"><%= link_to ' back to Seeds list', seedpacks_path, class:"btn btn-primary btn-lg" %> </div>
 </div>
 
 
 
 
-      <div>
-        <h2><%= @seedpack.name %></h2>
-        <a href=""> <%= @seedpack.image %> </a>
-        <p><%= @seedpack.description %></p>
-      </div>
-      <div>
-          <h3> name : <%= @user.name %></h3>
-          <h3> bio : <%= @user.bio %></h3>
-          <h3>city : <%= @user.city %></h3>
-      </div>
-    </div>
-  </div>
 <!-- <div class="row justify-content-center">
       <div class="col-12 col-lg-6"> -->
 
-<p><%= @seedpack.description %></p>
-<h3><%= @seedpack.number %> - unité</h3>
-<h3><%= @seedpack.price %>€</h3>
-<h3> name : <%= @user.name %></h3>
-<h3> bio : <%= @user.bio %></h3>
-<h3><%= @user.avatar %></h3>
-<h3>city : <%= @user.city %></h3>
-<%= link_to ' back to Seeds list', seedpacks_path, class:"btn btn-primary btn-lg" %>
-<%= link_to 'Buy the seed package', seedpack_orders_path(@seedpack), method: :post, class:"btn btn-primary btn-lg" %>
+
+
+
 
 
 
   <div class="row justify-content-center py-5">
      <div class="col-12 col-lg-6">
-      <div>
-        <h3> Quantité : <%= @seedpack.number %> - unité</h3>
-        <h3> Prix : <%= @seedpack.price %>€</h3>
-        <h3> Date d'ajout : <%= @seedpack.created_at
-         %>€</h3>
+
       </div>
 
-      <div>
-        <h3> name : <%= @user.name %></h3>
-        <h3> bio : <%= @user.bio %></h3>
-        <h3>city : <%= @user.city %></h3>
-        <h3><%= @user.avatar %></h3>
-      </div>
-    </div>
-  </div>
-  <%= link_to 'Retour', seedpacks_path, class:"btn btn-primary btn-lg" %>
-</div>
