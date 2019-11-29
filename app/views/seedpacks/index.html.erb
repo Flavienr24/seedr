@@ -7,15 +7,18 @@
     </div>
     <div class="seed-cards-grid">
       <% @seedpacks_available.each do |seedpack| %>
-        <div class="card-seed" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?flowers');">
-          <div class="card-seed-text">
-            <h3><%= seedpack.name %></h3>
+      <%= link_to seedpack_path(seedpack) do %>
+        <div class="card-seed">
+          <img src="https://source.unsplash.com/500x400/?flowers" alt="seed-image">
+          <div class="card-seed-content">
+            <h2><%= seedpack.name %></h2>
             <p> <%= truncate seedpack.description, length: 70 %></p>
             <p><%= seedpack.price %>€</p>
-            <%= link_to 'Details', seedpack_path(seedpack) %>
           </div>
         </div>
+      <% end %>
       <%end%>
+    </div>
     </div>
   </div>
   <div class="map">
