@@ -2,23 +2,23 @@
 
 <div class="container">
 
-  <div class="btn-back"><%= link_to ' back to Seeds list', seedpacks_path, class:"btn btn-primary btn-lg" %></div>
+  <div class=""><%= link_to ' back to Seeds list', seedpacks_path, class:"btn btn-primary btn-lg btn-back" %></div>
 
-  <div id="card-seed" class="d-flex align-items-center" >
+  <div class="card-seed d-flex" >
 
-    <%= image_tag @seedpack.image, id:"seed_image" %>
+    <%= image_tag @seedpack.image, class: "image-seed", id:"seed_image", style: "width: 376px; height: 391px " %>
 
-    <div id="bio-seed">
+    <div class="bio-seed position-relative">
       <h2><%= @seedpack.name %></h2>
       <h5>Description:</h5>
       <p><%= @seedpack.description %></p>
-      <div id="btn-buy"><%= link_to 'Buy the seed package', seedpack_orders_path(@seedpack), method: :post, class:"btn btn-primary btn-lg" %></div>
+      <div class="btn-buy position-absolute fixed-bottom "><%= link_to 'Buy the seed package', seedpack_orders_path(@seedpack), method: :post, class:"btn btn-primary btn-lg" %></div>
     </div>
 
   </div>
 
-  <div id="complement" class="d-flex align-items-center border-radius=5px " >
-    <div id="info-seedpack-seedshow">
+  <div class= "card-complement d-flex justify-content-between border-radius=5px " >
+    <div class="info-seedpack-seedshow p-3">
       <h3>Details:</h3>
       <div id="qty">
         <p>Quantity =       <%= @seedpack.number %> pcs</p>
@@ -31,19 +31,19 @@
       </div>
     </div>
 
-    <div class="info-user-seedshow d-flex align-items-center">
+    <div class="info-user-seedshow d-flex">
 
-      <div class="image-user">
-        <%= image_tag @user.avatar %>
+      <div class="image-user" >
+        <%= image_tag @user.avatar, class: "image-user", style: "width: 148px; height: 148px; margin: 16px"%>
       </div>
-      <div id="bio-user-seedshow">
+      <div class="bio-user-seedshow">
         <h3><%= @user.name %></h3>
-        <h5> Bio: </h5>
+        <h5>       Bio: </h5>
         <p><%= @user.bio %></p>
       </div>
     </div>
   </div>
-  <div class="btn-back"><%= link_to ' back to Seeds list', seedpacks_path, class:"btn btn-primary btn-lg" %> </div>
+  <div class=""><%= link_to ' back to Seeds list', seedpacks_path, class:"btn btn-primary btn-lg btn-back" %> </div>
 </div>
 
 
