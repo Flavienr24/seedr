@@ -1,0 +1,30 @@
+
+.card-seed {
+  height: 294px;
+  border-radius: 16px 16px 0px 0px;
+  margin-bottom: 32px;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
+}
+
+.card-seed img {
+  height: 68%;
+}
+
+.card-seed-content {
+  background-color: white;
+  height: 32%;
+}
+
+.card-seed h2 {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 20px;
+  color: $black;
+}
+
+.card-seed p {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  color: $black;
+}
