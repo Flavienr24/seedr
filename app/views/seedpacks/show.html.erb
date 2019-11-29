@@ -4,19 +4,20 @@
 
   <div class="btn-back"><%= link_to ' back to Seeds list', seedpacks_path, class:"btn btn-primary btn-lg" %></div>
 
-  <div id="card-seed" class="d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), width = 30%, url('https://source.unsplash.com/500x400/?flowers');">
-    <div id="seed_image">
-      <a href="#"><%= @seedpack.image %></a>
-    </div>
+  <div id="card-seed" class="d-flex align-items-center" >
+
+    <%= image_tag @seedpack.image, id:"seed_image" %>
+
     <div id="bio-seed">
       <h2><%= @seedpack.name %></h2>
       <h5>Description:</h5>
       <p><%= @seedpack.description %></p>
+      <div id="btn-buy"><%= link_to 'Buy the seed package', seedpack_orders_path(@seedpack), method: :post, class:"btn btn-primary btn-lg" %></div>
     </div>
-    <div id="btn-buy"><%= link_to 'Buy the seed package', seedpack_orders_path(@seedpack), method: :post, class:"btn btn-primary btn-lg" %></div>
+
   </div>
 
-  <div id="complement" class="d-flex align-items-center, border-radius=5px " >
+  <div id="complement" class="d-flex align-items-center border-radius=5px " >
     <div id="info-seedpack-seedshow">
       <h3>Details:</h3>
       <div id="qty">
@@ -31,9 +32,9 @@
     </div>
 
     <div class="info-user-seedshow d-flex align-items-center">
-      <h3>User:</h3>
-      <div class="image">
-        <a href=""><%= @user.avatar %></a>
+
+      <div class="image-user">
+        <%= image_tag @user.avatar %>
       </div>
       <div id="bio-user-seedshow">
         <h3><%= @user.name %></h3>
@@ -46,7 +47,7 @@
 </div>
 
 
-
+<!-- https://source.unsplash.com/500x400/?flowers' -->
 
 <!-- <div class="row justify-content-center">
       <div class="col-12 col-lg-6"> -->
