@@ -1,25 +1,42 @@
-<h1><strong>Make the sharing green again</strong></h1>
-
-<div> <%= link_to " Add a new seed", new_seedpack_path, class:"btn btn-primary btn-lg" %>
-</div>
-<div> <%= link_to " Back to Dashboard", dashboard_path, class:"btn btn-primary btn-lg" %>
-</div>
 <div class="container">
-  <div class="row">
-    <% @seedpacks_available.each do |seedpack| %>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card-seed" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?flowers');">
-          <div class="card-seed-text">
-            <h2><%= seedpack.name %></h2>
-            <h3><%= seedpack.price %>€</h3>
-            <h3> <%= seedpack.number %></h3>
-            <%= link_to 'Details', seedpack_path(seedpack) %>
+  <div class="search-bar">Chercher une graine</div>
+  <div> <%= link_to "+ Add a new seed", new_seedpack_path, class:"btn-add-seed-home" %> </div>
+  <div class="display-seed-block">
+    <div class="title-display-seed page-title">
+      Availables seeds
+    </div>
+    <div class="seed-cards-grid">
+      <% @seedpacks_available.each do |seedpack| %>
+      <%= link_to seedpack_path(seedpack) do %>
+      <div class="card-seed">
+        <div class="seed-card-price"><%= seedpack.price %>€</div>
+        <div class="card-img"><img src="https://source.unsplash.com/275x203/?flowers<%=rand(1..100)%>" alt="seed-image"></div>
+        <div class="card-seed-content">
+          <h2><%= seedpack.name %></h2>
+          <div><p> <%= truncate seedpack.description, length: 50 %></p></div>
           </div>
-        </div>
-       </div>
-        <%end%>
+      </div>
+      <% end %>
+      <%end%>
+    </div>
+  </div>
+  <div class="map">
   </div>
 </div>
-
-
+<!--
+<div class="row">
+  <% @seedpacks_available.each do |seedpack| %>
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="card-seed" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?flowers');">
+      <div class="card-seed-text">
+        <h2><%= seedpack.name %></h2>
+        <h3><%= seedpack.price %>€</h3>
+        <h3> <%= seedpack.number %></h3>
+        <%= link_to 'Details', seedpack_path(seedpack) %>
+      </div>
+    </div>
+  </div>
+  <%end%>
+</div>
+-->
 <!-- probleme mauvaise authentification , il remet un mail (pas le bon)-->
