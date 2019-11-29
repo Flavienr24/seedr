@@ -44,9 +44,35 @@ h1 {
 .btn-form {
   width: 30%;
   margin: 50px;
-  background-color:: #3E5902
+}
+
+.btn-add{
+    background-color: #3E5902;
+    border-radius:22px;
+    font-size: 16px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 250px;
+    margin: 20px;
+    color: white;
+    transition-duration: 0.4s
+  }
+
+.btn-add:hover {
+  background-color: white;
+  border: 2px solid #3E5902;
+  color: black;
 }
 
 .new_seedpack {
   width: 50%
+}
+
+.btn-back {
+  border: 2px solid #D96704;
+  border-radius:22px;
+  font-size: 16px;
+  width: 250px;
+  background-color: white;
+  margin: 22px;
+  margin-top: 16px;
 }
