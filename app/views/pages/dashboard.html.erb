@@ -1,63 +1,77 @@
-  <div class="banner-content">
-    <h1>DashBoard</h1>
+<!-- BANNER SECTION -->
+<div class="banner-content">
+  <h1>DashBoard</h1>
+</div>
+<div class="container">
+
+  <!-- CARD USER PROFILE -->
+  <div class="card-product">
+
+      <%#= image_tag @user.avatar if @user.avatar%>
+    <img src="https://picsum.photos/200" class="avatar-dashboard" alt="avatar">
+
+    <div class="product_description">
+        <h3><%= @user.name%></h3>
+        <p><%= @user.email%></p>
+        <p><%= @user.city %></p>
+      <%= link_to "Add a seed", new_seedpack_path, class: "btn btn-success btn-lg" %>
     </div>
-<div>
-  <h3><%= @user.name%></h3>
+  </div>
 
-<%= image_tag @user.avatar if @user.avatar%>
+  <!--  CARD MY SEEDPACK  -->
 
-  <h5><%= @user.email%></h5>
-  <h5><%= @user.city %></h5>
-  <%= link_to "Add a seed", new_seedpack_path, class: "btn btn-success btn-lg" %>
-</div>
-
-<div class="container">
-  <div class="row">
-    <h3>Mes Graines</h3>
-    <% @myseeds.each do |seed| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
-          <div class="card-description">
-            <h2><%=seed.name %></h2>
-            <%= image_tag "logo.png", alt: "graine", width: 200 %>
-          </div>
+      <!-- <h3>Mes Graines</h3> -->
+<div class="card-product">
+<div class="row">
+  <% @myseeds.each do |seed| %>
+  <div class="col-12 col-md-6 d-flex">
+    <img src="https://source.unsplash.com/random" class="avatar-dashboard" alt="random picture">
+        <div class="product_description">
+          <h2><%=seed.name %></h2>
+          <h3><%= seed.description %></h3>
           <%= link_to "Delete", seedpack_path(seed), class: 'card-link', method: :delete,
-      data: { confirm: "Are you sure?" }%>
-          <%= link_to "Modify", edit_seedpack_path(seed), class: 'card-link' %>
+          data: { confirm: "Are you sure?" }%>
+          <%= link_to "Modify", edit_seedpack_path(seed),class: 'card-link' %>
         </div>
-      </div>
-    <% end %>
   </div>
+  <% end %>
+  <div class="col-12 col-md-6 d-flex">
+<!--     lien pour ajouter des graines -->
+  </div>
+</div>
 </div>
 
 
-<div class="container">
-  <div class="row">
-    <h3>Mes Ventes</h3>
-    <% @mysells.each do |sell| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
-          <div class="card-description">
-            <h2><%=sell.user.name %></h2>
-          </div>
-        <% end %>
-        </div>
-      </div>
-  </div>
-</div>
 
-<div class="container">
-  <div class="row">
-    <h3>Mes Achats</h3>
-    <% @mybuys.each do |buy| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?flowers');">
-          <div class="card-description">
-            <h2><%= buy.seedpack.name %></h2>
-          </div>
-        <% end %>
-        </div>
+  <!--   CARD MY HISTORIC -->
+<div class="card-product">
+    <div class="d-flex">
+      <div class="">
+        <h2>Mes ventes</h2>
+
+        <!-- VENTES -->
+         <% @mysells.each do |sell| %>
+          <img src="https://source.unsplash.com/random" class="avatar-dashboard" alt="random picture">
+          <h2><%=sell.user.name %></h2>
+          <% end %>
+
       </div>
+
+      <div>
+        <h2> Mes achats</h2>
+
+          <% @mybuys.each do |buy| %>
+          <img src="https://source.unsplash.com/random" class="avatar-dashboard" alt="random picture">
+          <h2><%=buy.seedpack.name %></h2>
+          <% end %>
+      </div>
+    </div>
+</div>
+          <!-- <h3>Mes Ventes</h3> -->
+
+
+  <div>
+    <%= link_to 'Voir les graines', seedpacks_path %>
   </div>
 </div>
-<%= link_to 'Voir les graines', seedpacks_path %>
+<%#= image_tag "logo.png", alt: "graine", width: 30 %>
