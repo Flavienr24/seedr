@@ -1,63 +1,88 @@
-  <div class="banner-content">
-    <h1>DashBoard</h1>
+<!-- BANNER SECTION -->
+<div class="banner-content">
+  <h1>DashBoard</h1>
+</div>
+<div class="container">
+
+
+  <!-- CARD USER PROFILE -->
+  <div class="card-product">
+      <%#= image_tag @user.avatar if @user.avatar%>
+
+    <img src="https://picsum.photos/200" class="avatar-dashboard" alt="avatar">
+
+    <div class="product_description">
+        <h3><%= @user.name%></h3>
+        <p><%= @user.email%></p>
+        <p><%= @user.city %></p>
+      <%#= link_to "Add a seed", new_seedpack_path, class: "btn btn-success btn-lg" %>
     </div>
-<div>
-  <h3><%= @user.name%></h3>
+  </div>
 
-<%= image_tag @user.avatar if @user.avatar%>
+  <!--  CARD MY SEEDPACK  -->
 
-  <h5><%= @user.email%></h5>
-  <h5><%= @user.city %></h5>
-  <%= link_to "Add a seed", new_seedpack_path, class: "btn btn-success btn-lg" %>
-</div>
-
-<div class="container">
-  <div class="row">
-    <h3>Mes Graines</h3>
-    <% @myseeds.each do |seed| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
-          <div class="card-description">
-            <h2><%=seed.name %></h2>
-            <%= image_tag "logo.png", alt: "graine", width: 200 %>
-          </div>
+      <!-- <h3>Mes Graines</h3> -->
+<div class="card-product">
+<div class="row">
+  <% @myseeds.each do |seed| %>
+  <div class="col-12 col-md-6 d-flex">
+    <img src="https://source.unsplash.com/89x89/?flowers"<%= rand(1..100)%>class="image-dashboard" alt="random picture">
+        <div class="product_description">
+          <h3><%=seed.name %></h3>
+          <p><%= seed.description %></p>
           <%= link_to "Delete", seedpack_path(seed), class: 'card-link', method: :delete,
-      data: { confirm: "Are you sure?" }%>
-          <%= link_to "Modify", edit_seedpack_path(seed), class: 'card-link' %>
+          data: { confirm: "Are you sure?" }%>
+           <!-- <i class="fa fa-trash" aria-hidden="true"></i> -->
+          <%= link_to "Modify", edit_seedpack_path(seed),class: 'card-link' %>
+   <!--        <i class="fas fa-pen"></i> -->
         </div>
-      </div>
-    <% end %>
   </div>
+  <% end %>
+  <div>
+      <div id="button">
+        <i class="fas fa-plus"></i>
+        <%= link_to " Add a seed", new_seedpack_path, class:"btn btn-primary btn-lg" %>
+      </div>
+  </div>
+</div>
 </div>
 
 
-<div class="container">
-  <div class="row">
-    <h3>Mes Ventes</h3>
-    <% @mysells.each do |sell| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
-          <div class="card-description">
-            <h2><%=sell.user.name %></h2>
+  <!--   CARD MY HISTORIC -->
+<div class="card-product">
+    <div class="d-flex justify-content-center" >
+              <!-- VENTES -->
+      <div>
+        <h3>My sells</h3>
+         <% @mysells.each do |sell| %>
+          <div >
+            <img src="https://source.unsplash.com/89x89?flowers"<%= rand(1..100)%>class="image-dashboard" alt="random picture">
+            <div class="product_description">
+                <h2><%=sell.user.name %></h2>
+            </div>
           </div>
-        <% end %>
-        </div>
-      </div>
-  </div>
-</div>
+          <% end %>
 
-<div class="container">
-  <div class="row">
-    <h3>Mes Achats</h3>
-    <% @mybuys.each do |buy| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?flowers');">
-          <div class="card-description">
-            <h2><%= buy.seedpack.name %></h2>
-          </div>
-        <% end %>
-        </div>
       </div>
+        <!-- ACHATS -->
+      <div>
+        <h3> My orders</h3>
+          <% @mybuys.each do |buy| %>
+          <div >
+            <img src="https://source.unsplash.com/89x89?flowers"<%= rand(1..100)%>class="image-dashboard" alt="random picture">
+            <div class="product_description">
+              <h2><%=buy.seedpack.name %></h2>
+            </div>
+          </div>
+          <% end %>
+      </div>
+    </div>
+</div>
+          <!-- <h3>Mes Ventes</h3> -->
+
+
+  <div>
+    <%= link_to 'Voir les graines', seedpacks_path %>
   </div>
 </div>
-<%= link_to 'Voir les graines', seedpacks_path %>
+<%#= image_tag "logo.png", alt: "graine", width: 30 %>
