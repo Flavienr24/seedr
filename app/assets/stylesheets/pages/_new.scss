@@ -50,8 +50,10 @@ h1 {
     background-color: #3E5902;
     border-radius:22px;
     font-size: 16px;
+    font-family: Roboto;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    width: 250px;
+    width: 219px;
+    height: 48px;
     margin: 20px;
     color: white;
     transition-duration: 0.4s
@@ -67,12 +69,3 @@ h1 {
   width: 50%
 }
 
-.btn-back {
-  border: 2px solid #D96704;
-  border-radius:22px;
-  font-size: 16px;
-  width: 250px;
-  background-color: white;
-  margin: 22px;
-  margin-top: 16px;
-}
